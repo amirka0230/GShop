@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
     <title>Демо Bootstrap</title>
   </head>
   <body>
   <div class="wrapper">
    <nav class="navbar">
        <div class="container">
-           <a href="#" class="navbar-brand">Good Luck Have Fun</a>
+           <a href="#" class="navbar-brand">GL HF</a>
            <div class="navbar-wrap">
                <ul class="navbar-menu">
                    <li><a href="#">Новинки!</a></li>
@@ -48,22 +48,23 @@
            <div class="popup_content">
                <a href="#" class="popup_close close-popup">&#10006</a>
                <div class="popup_title">Регистрация</div>
-               <div class="popup_text">
-                   <form action="">
+               <div class="popup_text_reg">
+                   <form action="inc/signup.php" method="post">
                        <label>Логин</label>
-                       <input type="text" placeholder="Введите логин">
+                       <input type="text" name="login" placeholder="Введите логин">
                        <label>Фамилия</label>
-                       <input type="text" placeholder="Введите фамилию">
+                       <input type="text" name="Fname" placeholder="Введите фамилию">
                        <label>Имя</label>
-                       <input type="text" placeholder="Введите имя">
+                       <input type="text" name="name" placeholder="Введите имя">
                        <label>Mail</label>
-                       <input type="text" placeholder="Введите mail">
+                       <input type="text" name="mail" placeholder="Введите mail">
                        <label>Пароль</label>
-                       <input type="password" placeholder="Придумайте пароль">
+                       <input type="password" name="password" placeholder="Придумайте пароль">
                        <label>Подтверждение Пароля</label>
-                       <input type="password" placeholder="Подтвердите пароль">
-                       <button>Войти</button>
+                       <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
+                       <button>Зарегистрироваться</button>
                        <div class="text_reg"><p>У вас уже есть аккаунт? - <a href="#popup" class="popup-link" id="open_popup_auth">Войдите</a></p></div>
+                       <p class="msg">Пароли не совпадают</p>
                    </form>
                </div>
            </div>

@@ -4,7 +4,7 @@ body
     width: 100%;
     height: 9238px;
     background: #c4c4c4;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #FFF;
     font-size: 15px;
 }
@@ -73,7 +73,7 @@ body.lock {
     box-shadow: 0 5px 5px rgba(160, 131, 253, .5);
 }
 .navbar-brand {
-    font-weight: 1000;
+    font-weight: 900;
     font-size: 75px;
     text-decoration: none;
     color: #fff;
@@ -85,6 +85,7 @@ body.lock {
     color: rgb(160 131 253);
 }
 .popup {
+    font-family: 'Montserrat', Bahnschrift;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -131,7 +132,7 @@ body.lock {
     position: absolute;
     right: 5%;
     top: 5%;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #8d8d8d;
     font-size: 20px;
     cursor: pointer;
@@ -145,20 +146,21 @@ body.lock {
     opacity: 1;
 }
 .popup_title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     font-size: 30px;
-    margin: 0px 0px 1em 0px;
+
 }
 .popup_text {
     margin: auto;
-    width: 350px;
+    width: 450px;
     background-color: #434343;
     border-radius: 10px;
     text-align: center;
     position: relative;
+    height: 675px;
 }
 .popup_text label{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #ffffff;
     font-size: 17px;
 }
@@ -166,20 +168,20 @@ body.lock {
     position: absolute;
     top: 5%;
     left: 27.5%;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #ffffff;
     font-size: 30px;
     margin: auto;
 }
 .popup_text input {
     display: block;
-    margin: 5px auto 35px auto;
+    margin: 10px auto 10px auto;
     width: 330px;
     padding: 10px 10px;
     background-color: #ffffff;
     border-radius: 10px;
     border: none;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #000;
     font-size: 20px;
 }
@@ -189,10 +191,9 @@ body.lock {
 .popup_text button{
     cursor: pointer;
     display: block;
-    width: 90px;
-    margin: auto auto -50px auto;
+    width: auto;
     padding: 10px 0px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #ffffff;
     font-size: 17px;
     font-weight: 600;
@@ -201,25 +202,42 @@ body.lock {
     background-color: #a083fd;
     text-decoration: none;
     transition: all .2s ease-in-out;
+    text-align: center;
+    left: 32%;
+    top: 86%;
+    position: absolute;
 }
 .popup_text button:hover {
     transform: scale(1.05);
     color: #FFF;
     box-shadow: 0 5px 5px rgba(160, 131, 253, .5);
 }
-.popup_text .text_reg p {
-    top: 100%;
+.popup_text_reg .text_reg p {
+    top: auto;
     left: auto;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     color: #fff;
     font-size: 15px;
     position: relative;
-    margin: 20% 0px 0px 0px;
+    margin: 27% 0px 0px 0px;
 }
-.popup_text .text_reg a {
+.popup_text_reg .text_reg a {
     position: inherit;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Bahnschrift;
     font-size: 15px;
     color: #e600ff;
     text-decoration: none;
+}
+.popup_text_reg p.msg {
+    border: 5px none;
+    border-radius: 10px;
+    border-color: #fff;
+    background-color: #fff;
+    padding: 1px 103px 0px 86px;
+    font-family: 'Montserrat', Bahnschrift;
+    font-size: 15px;
+    color: #e600ff;
+    top: 85%;
+    left: 0%;
+    text-align: center;
 }
