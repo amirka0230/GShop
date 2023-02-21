@@ -1,3 +1,6 @@
+<?php
+ session_start()
+?>
 <!doctype html>
 <html lang="ru">
   <head>
@@ -36,7 +39,7 @@
                            <label>Пароль</label>
                            <input type="password" placeholder="Пароль">
                            <button>Войти</button>
-                           <div class="text_reg"><p>У вас нет аккаунта? - <a href="#popup_1" class="popup-link" id="open_pop_up_reg">Зарегистрируйтесь</a></p></div>
+                           <div class="text_auth"><p>У вас нет аккаунта? - <a href="#popup_1" class="text_auth popup-link" id="open_pop_up_reg">Зарегистрируйтесь</a></p></div>
                        </form>
                    </div>
            </div>
@@ -62,9 +65,14 @@
                        <input type="password" name="password" placeholder="Придумайте пароль">
                        <label>Подтверждение Пароля</label>
                        <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
+                       <p class="msg">
+                           <?php
+                           echo $_SESSION['message'];
+                           unset ($_SESSION['message']);
+                           ?>
+                       </p>
                        <button>Зарегистрироваться</button>
                        <div class="text_reg"><p>У вас уже есть аккаунт? - <a href="#popup" class="popup-link" id="open_popup_auth">Войдите</a></p></div>
-                       <p class="msg">Пароли не совпадают</p>
                    </form>
                </div>
            </div>

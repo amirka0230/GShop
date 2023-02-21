@@ -148,16 +148,15 @@ body.lock {
 .popup_title {
     font-family: 'Montserrat', Bahnschrift;
     font-size: 30px;
-
+    margin: 5px auto 50px auto;
 }
 .popup_text {
     margin: auto;
-    width: 450px;
+    width: 400px;
     background-color: #434343;
     border-radius: 10px;
     text-align: center;
     position: relative;
-    height: 675px;
 }
 .popup_text label{
     font-family: 'Montserrat', Bahnschrift;
@@ -175,7 +174,7 @@ body.lock {
 }
 .popup_text input {
     display: block;
-    margin: 10px auto 10px auto;
+    margin: 5px auto 30px auto;
     width: 330px;
     padding: 10px 10px;
     background-color: #ffffff;
@@ -192,7 +191,7 @@ body.lock {
     cursor: pointer;
     display: block;
     width: auto;
-    padding: 10px 0px;
+    padding: 10px 10px;
     font-family: 'Montserrat', Bahnschrift;
     color: #ffffff;
     font-size: 17px;
@@ -203,41 +202,121 @@ body.lock {
     text-decoration: none;
     transition: all .2s ease-in-out;
     text-align: center;
-    left: 32%;
-    top: 86%;
-    position: absolute;
+    position: relative;
+    margin: auto auto 30px;
 }
 .popup_text button:hover {
     transform: scale(1.05);
     color: #FFF;
     box-shadow: 0 5px 5px rgba(160, 131, 253, .5);
 }
-.popup_text_reg .text_reg p {
-    top: auto;
+.popup_text .text_auth p {
     left: auto;
-    font-family: 'Montserrat', Bahnschrift;
-    color: #fff;
-    font-size: 15px;
     position: relative;
-    margin: 27% 0px 0px 0px;
+    font-family: 'Montserrat', Bahnschrift;
+    color: #ffffff;
+    font-size: 15px;
+    margin: auto;
 }
-.popup_text_reg .text_reg a {
+.popup_text .text_auth a {
     position: inherit;
     font-family: 'Montserrat', Bahnschrift;
     font-size: 15px;
     color: #e600ff;
     text-decoration: none;
+    margin: 30px auto 5px;
 }
-.popup_text_reg p.msg {
-    border: 5px none;
+.popup_title_reg {
+    font-family: 'Montserrat', Bahnschrift;
+    font-size: 30px;
+    margin: 5px auto 25px auto;
+}
+.popup_text_reg {
+    margin: auto;
+    width: 400px;
+    background-color: #434343;
     border-radius: 10px;
-    border-color: #fff;
-    background-color: #fff;
-    padding: 1px 103px 0px 86px;
+    text-align: center;
+    position: relative;
+}
+.popup_text_reg label{
+    font-family: 'Montserrat', Bahnschrift;
+    color: #ffffff;
+    font-size: 17px;
+}
+.popup_text_reg p {
+    position: absolute;
+    top: 5%;
+    left: 27.5%;
+    font-family: 'Montserrat', Bahnschrift;
+    color: #ffffff;
+    font-size: 30px;
+    margin: auto;
+}
+.popup_text_reg input {
+    display: block;
+    margin: 5px auto 30px auto;
+    width: 330px;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat', Bahnschrift;
+    color: #000;
+    font-size: 20px;
+}
+.popup_text_reg input:focus{
+    outline: none;
+}
+.popup_text_reg button{
+    cursor: pointer;
+    display: block;
+    width: auto;
+    padding: 10px 10px;
+    font-family: 'Montserrat', Bahnschrift;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background-color: #a083fd;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    position: relative;
+    margin: auto auto 30px;
+}
+.popup_text_reg button:hover {
+    transform: scale(1.05);
+    color: #FFF;
+    box-shadow: 0 5px 5px rgba(160, 131, 253, .5);
+}
+.popup_text_reg .text_reg p {
+    left: auto;
+    position: relative;
+    font-family: 'Montserrat', Bahnschrift;
+    color: #ffffff;
+    font-size: 15px;
+    margin: auto;
+}
+.popup_text_reg .text_reg a {
+    position: inherit;
     font-family: 'Montserrat', Bahnschrift;
     font-size: 15px;
-    color: #e600ff;
-    top: 85%;
-    left: 0%;
+    color: #a083fd;
+    text-decoration: none;
+}
+.popup_text_reg p.msg {
+    position: relative;
+    border: 10px none;
+    border-radius: 10px;
+    background-color: #a083fd;
+    padding: 10px 26px 10px 30px;
+    font-family: 'Montserrat', Bahnschrift;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    left: auto;
     text-align: center;
+    margin: 0px 24px 25px 24px;
 }
