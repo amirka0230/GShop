@@ -1,5 +1,5 @@
 <?php
- session_start()
+ session_start();
 ?>
 <!doctype html>
 <html lang="ru">
@@ -21,9 +21,7 @@
                    <li><a href="#">О нас</a></li>
                    <li><a href="#">Контакты</a></li>
                </ul>
-               <div class="button">
-                   <a href="#popup" class="popup-link">Войти</a>
-               </div>
+                   <button href="#popup" class="button popup-link">Войти</button>
            </div>
        </div>
    </nav>
@@ -31,9 +29,10 @@
        <div class="popup_body">
            <div class="popup_content">
                <a href="#" class="popup_close close-popup">&#10006</a>
-               <div class="popup_title">Авторизация</div>
+               <div class="popup_title"><a href="#" class="navbar-brand">GLHF</a><P>Авторизация</P></div>
                    <div class="popup_text">
                        <form action="">
+
                            <label>Логин</label>
                            <input type="text" placeholder="Логин">
                            <label>Пароль</label>
@@ -52,25 +51,25 @@
                <a href="#" class="popup_close close-popup">&#10006</a>
                <div class="popup_title">Регистрация</div>
                <div class="popup_text_reg">
-                   <form action="inc/signup.php" method="post">
+                   <form action="inc/check.php" method="post">
                        <label>Логин</label>
                        <input type="text" name="login" placeholder="Введите логин">
-                       <label>Фамилия</label>
-                       <input type="text" name="Fname" placeholder="Введите фамилию">
-                       <label>Имя</label>
-                       <input type="text" name="name" placeholder="Введите имя">
+                       <label>Фамилия и имя</label>
+                       <input type="text" name="FIO" placeholder="Введите фамилию и имя">
                        <label>Mail</label>
                        <input type="text" name="mail" placeholder="Введите mail">
                        <label>Пароль</label>
                        <input type="password" name="password" placeholder="Придумайте пароль">
                        <label>Подтверждение Пароля</label>
                        <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-                       <p class="msg">
+
                            <?php
-                           echo $_SESSION['message'];
+                           if ($_SESSION['message'])
+                           {echo '<p class="msg"> ' . $_SESSION['message'] . '</p>';
+                           }
                            unset ($_SESSION['message']);
                            ?>
-                       </p>
+
                        <button>Зарегистрироваться</button>
                        <div class="text_reg"><p>У вас уже есть аккаунт? - <a href="#popup" class="popup-link" id="open_popup_auth">Войдите</a></p></div>
                    </form>
