@@ -1,5 +1,8 @@
 <?php
- session_start();
+session_start();
+if ($_SESSION['user']) {
+    header('Location: profile.php');
+}
 ?>
 <!doctype html>
 <html lang="ru">
@@ -32,13 +35,12 @@
                <div class="popup_title"><a href="#" class="navbar-brand">GLHF</a><P>Авторизация</P></div>
                    <div class="popup_text">
                        <form action="">
-
                            <label>Логин</label>
-                           <input type="text" placeholder="Логин">
+                           <input type="text" placeholder="Логин" name="login">
                            <label>Пароль</label>
-                           <input type="password" placeholder="Пароль">
-                           <button>Войти</button>
-                           <div class="text_auth"><p>У вас нет аккаунта? - <a href="#popup_1" class="text_auth popup-link" id="open_pop_up_reg">Зарегистрируйтесь</a></p></div>
+                           <input type="password" placeholder="Пароль" name="password">
+                           <button class="button_login">Войти</button>
+                           <div class="text_auth"><p>У вас уже есть аккаунт? - <a href="#popup_1" class="popup-link" id="open_popup_reg">Зарегистрируйтесь</a></p></div>
                        </form>
                    </div>
            </div>
@@ -51,32 +53,33 @@
                <a href="#" class="popup_close close-popup">&#10006</a>
                <div class="popup_title">Регистрация</div>
                <div class="popup_text_reg">
-                   <form action="inc/check.php" method="post">
-                       <label>Логин</label>
-                       <input type="text" name="login" placeholder="Введите логин">
-                       <label>Фамилия и имя</label>
-                       <input type="text" name="FIO" placeholder="Введите фамилию и имя">
-                       <label>Mail</label>
-                       <input type="text" name="mail" placeholder="Введите mail">
-                       <label>Пароль</label>
+                   <form action="inc/check.php" id="form_reg">
+                       <label>Логин*</label>
+                       <input type="text" name="login"  placeholder="Введите логин">
+                       <label>Фамилия и имя*</label>
+                       <input type="text" name="FIO" placeholder="Введите фамилию и имя" >
+                       <label>E-Mail*</label>
+                       <input type="text" name="mail"  placeholder="Введите e-mail">
+                       <label>Пароль*</label>
                        <input type="password" name="password" placeholder="Придумайте пароль">
-                       <label>Подтверждение Пароля</label>
-                       <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-
-                           <?php
-                           if ($_SESSION['message'])
-                           {echo '<p class="msg"> ' . $_SESSION['message'] . '</p>';
-                           }
-                           unset ($_SESSION['message']);
-                           ?>
-
-                       <button>Зарегистрироваться</button>
-                       <div class="text_reg"><p>У вас уже есть аккаунт? - <a href="#popup" class="popup-link" id="open_popup_auth">Войдите</a></p></div>
+                       <label>Подвердите пароль*</label>
+                       <input type="password" name="password_confirm" placeholder="Придумайте пароль">
+                       <div class="checkbox">
+                           <input id="checkbox_agree" type="checkbox" name="agreement" class="checkbox_input">
+                           <label for="checkbox_agree" class="checkbox_label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+                       </div>
+                       <p class="msg none">Lorem ipsum dolor sit amet.</p>
+                       <button type="submit" class="reg_button">Зарегистрироваться</button>
+                       <div class="text_reg">
+                           <p>У вас уже есть аккаунт? - <a href="#popup" class="popup-link" id="open_popup_auth">Войдите</a></p>
+                       </div>
                    </form>
                </div>
            </div>
        </div>
    </div>
+  <script src="JS/jquery-3.4.1.min.js"></script>
   <script src="JS/main.js"></script>
+  <script src="JS/popup.js"></script>
   </body>
   </html>
